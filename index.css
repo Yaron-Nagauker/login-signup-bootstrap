@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    /* from css tricks */
+    background: url('./img/angelo-abear-knTKij60p3g-unsplash.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.title{
+    text-align: start;
+    
+}
+
+.form-login{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 550px;
+    width: 600px;
+    background-color: white;
+    font-size: 18px;
+    font-family: "Poppins" , sans-serif;
+}
+
+.input{
+    margin-bottom: 20px;
+}
+
+.img-cover{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url('./img/s-o-c-i-a-l-c-u-t-UThaHAc8wh0-unsplash.jpg'); 
+    background-size: cover;
+    height: 550px;
+    width: 600px;
+    z-index: 1;
+    color: white;
+    transition: ease-in-out 400ms;
+}
+
+.img-cover.open{
+    transform: translate(600px)
+}
+
+.form-signup{
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 550px;
+    width: 600px;
+    background-color: white;
+    font-size: 18px;
+    font-family: "Poppins" , sans-serif;
+}
+
+
+@media(max-width: 1200px) {
+
+    body{
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    .form-login{
+        height: 400px;
+        font-size: 12px;
+    }
+
+    .form-signup{
+        height: 400px;
+        font-size: 12px;
+    }
+
+    .input{
+        margin-bottom: 10px;
+    }
+
+    .img-cover{
+        height: 400px;
+    }
+
+    .img-cover.open{
+        transform: translate(0,400px)
+        
+    }
+}
