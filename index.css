@@ -80,22 +80,70 @@ body{
     font-family: "Poppins" , sans-serif;
 }
 
+.headline{
+    display: none;
+}
+
 
 @media(max-width: 1200px) {
 
+    .form-login{
+        height: 500px;
+        width: 400px;
+        font-size: 10px;
+        font-size: 15px;
+    }
+
+    .form-signup{
+        height: 500px;
+        width: 400px;
+        font-size: 10px;
+        font-size: 15px;
+    }
+
+    .img-cover{
+        height: 500px;
+        width: 400px;
+    }
+
+    .img-cover.open{
+        transform: translate(400px,0px)
+    }
+    
+}
+
+@media(max-width: 800px) {
+    
     body{
+        position: relative;
         flex-direction: column;
+        justify-content: flex-start;
         overflow: auto;
     }
 
     .form-login{
+        position: static;
         height: 400px;
-        font-size: 12px;
+        width: 100%;
+        font-size: 15px;
+        transition: ease-in-out 400ms;
+    }
+
+    .form-login.close{
+        transform: translate(90deg); 
+        display: none;
+    }
+
+    .form-signup.close{
+        display: none;
     }
 
     .form-signup{
+        position: static;
         height: 400px;
-        font-size: 12px;
+        width: 100%;
+        font-size: 15px;
+        transition: ease-in-out 400ms;
     }
 
     .input{
@@ -103,11 +151,41 @@ body{
     }
 
     .img-cover{
+        display: none;
         height: 400px;
     }
 
-    .img-cover.open{
-        transform: translate(0,400px)
-        
+    .headline{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: static;
+        width: 100%;
+        height: 160px;
+        background: url('./img/s-o-c-i-a-l-c-u-t-UThaHAc8wh0-unsplash.jpg'); 
+        background-size: cover;
+        color: white;
     }
+}
+
+@media(max-width: 600px) {
+    .form-login{
+        height: 100%;
+        width: 400;
+        font-size: 10px;
+    }
+
+    .form-signup{
+        height: 100%;
+        width: 400;
+        font-size: 10px;
+    }
+
+    .img-cover{
+        height: 100%;
+        width: 400;
+    }
+
+
 }
